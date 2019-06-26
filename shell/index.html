@@ -13,40 +13,54 @@
   </head>
   <body>
     {{{partials.header}}}
-
-    <p>
-      WebAssembly (Wasm) is an universal low level bytecode that runs on the
-      web. It is a compilation target for langauges like
-      <b
-        >Rust, AssemblyScript (Typescript-like), Emscripten (C/C++), and much
-        more!</b
-      >
-      Wasm offer a compact binary format, with predictable performance to run
-      alongside Javascript. Wasm is currently shipped in all major browsers, and
-      has runtimes meant for running on servers or interfacing with systems
-      using WASI. To get started, browse the list of examples below.
-    </p>
-
-    <!-- List of examples -->
-    <h2>Examples</h2>
-    {{#categories}}
-    <h3 style="display: none" class="{{class}}">{{title}}</h3>
-    <ul>
-      {{#examples}}
-      <li
-        style="display: none"
-        class="{{programmingLanguage}} {{readingLanguage}}"
-      >
-        <a
-          href="#"
-          onclick="goToExample('{{parentPath}}', '{{exampleName}}', '{{programmingLanguage}}', '{{readingLanguage}}')"
-          >{{title}}</a
+    <main>
+      <p>
+        WebAssembly (Wasm) is an universal low level bytecode that runs on the
+        web. It is a compilation target for languages like
+        <strong
+          >Rust, AssemblyScript (Typescript-like), Emscripten (C/C++), and
+          muchmore!</strong
         >
-      </li>
-      {{/examples}}
-    </ul>
-    {{/categories}} {{{partials.footer}}}
-
+      </p>
+      <p>
+        Wasm offer a compact binary format, with predictable performance to run
+        alongside Javascript. Wasm is currently shipped in all major browsers,
+        andhas runtimes meant for running on servers or interfacing with systems
+        using WASI.
+        <br />To get started, browse the list of examples below.
+      </p>
+      <div class="card">
+        <p>
+          Wasm By Example is a hands-on introduction to WebAssembly using
+          annotated example programs. Learn more at
+          <a
+            onclick="goToExample('examples/introduction', 'introduction', 'all', 'en-us')"
+            href="#"
+            >WebAssembly Introduction</a
+          >
+          or browse the list of examples below.
+        </p>
+      </div>
+      <!-- List of examples -->
+      <h2>Examples</h2>
+      {{#categories}}
+      <h3 style="display: none" class="{{class}}">{{title}}</h3>
+      <ul>
+        {{#examples}}
+        <li
+          style="display: none"
+          class="{{programmingLanguage}} {{readingLanguage}}"
+        >
+          <a
+            href="#"
+            onclick="goToExample('{{parentPath}}', '{{exampleName}}', '{{programmingLanguage}}', '{{readingLanguage}}')"
+            >{{title}}</a
+          >
+        </li>
+        {{/examples}}
+      </ul>
+      {{/categories}} {{{partials.footer}}}
+    </main>
     <!-- prettier-ignore -->
     <script type="text/javascript">
       {{{js.index}}}
