@@ -89,3 +89,11 @@ p {
 .flex-column > * {
   margin: 5px;
 }
+
+.card {
+  color: #7a7a7a;
+  background-color: #1f1f1f;
+  padding: 24px;
+  border-radius: 3px;
+  border-top: 3px solid #654ff0;
+}
