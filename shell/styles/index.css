@@ -1,6 +1,34 @@
 html,
 body {
   color: #fff;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 16px;
+  max-width: none;
+  background-color: #111;
+}
+
+body > div,
+main {
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin-top: 2rem;
 }
 
 iframe {
@@ -8,16 +36,29 @@ iframe {
 }
 
 a {
-  text-decoration: underline;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a:hover {
-  color: #fff;
-  border-bottom: 0px solid #fff;
+  color: #654ff0;
+  border-bottom: none;
+}
+
+p {
+  letter-spacing: -0.003em;
+  font-size: 1.25rem;
+  text-align: justify;
 }
 
 .title {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.title img {
+  padding-right: 24px;
 }
 
 .language-picker a {
@@ -31,7 +72,7 @@ a:hover {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
